@@ -25,7 +25,7 @@
 
 </dl>
 
-<% matching_characters = Character.where({ :actor_id => @the_actor_id })%>
+<% matching_characters = Character.where({ :actor_id => @the_actor.id })%>
 
 <table border="1">
   <tr>
@@ -54,12 +54,11 @@
 
         <% the_director = matching_directors.at(0) %>
 
-        <%= the_director.director_id %>
+        <%= the_director.name %>
       </td>
       <td><%= a_character.name %></td>
       <td>
-        <a href="/movies/<%= the_movie.id %>"></a>
-        Show details
+        <a href="/movies/<%= the_movie.id %>">Show details</a>
       </td>
 
     </tr>

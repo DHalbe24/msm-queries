@@ -12,4 +12,8 @@ class DirectorsController < ApplicationController
 
     render({:template => "director_templates/details"})
   end
+
+  def youngest
+    youngest = params.fetch("dob")
+  end
 end
